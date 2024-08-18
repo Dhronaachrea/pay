@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.MerchantViewModel" />
+    </data>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMerchantLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="5dp"
+        tools:context=".paypr_app.ui.fragment.MerchantsFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/find_merchant_who_accepts_paypr"
+            android:textColor="@color/additional_text"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="16dp"
+            android:textSize="17sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvError"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:textColor="@color/additional_text"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/activity_padding"
+            android:layout_marginEnd="@dimen/activity_padding"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:visibility="gone"
+            android:textSize="18sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMerchant"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/activity_padding"
+            android:layout_marginEnd="@dimen/activity_padding"
+            android:layout_height="0dp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="15dp"
+                android:background="@color/keypad_color" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/additional_text_3"
+                android:text="@string/find_merchants_within" />
+
+            <androidx.appcompat.widget.AppCompatSeekBar
+                android:id="@+id/seekBar"
+                style="@style/Widget.AppCompat.SeekBar.Discrete"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="6"
+                android:layout_marginStart="@dimen/activity_padding"
+                android:layout_marginEnd="@dimen/activity_padding"
+                android:thumbTint="@color/additional_text"
+                app:tickMarkTint="@color/additional_text"
+                android:progressTint="@color/additional_text"
+                android:progress="3" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/activity_padding"
+                android:layout_marginEnd="@dimen/activity_padding"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:layout_marginStart="3dp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_10mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_15mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_20mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_25mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_30mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_35mi" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text_3"
+                    android:text="@string/_70mi" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

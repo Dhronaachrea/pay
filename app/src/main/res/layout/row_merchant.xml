@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="merchant"
+            type="com.skilrock.paypr.paypr_app.data_class.response_data.MerchantLocationResponseData.ResponseData.Data" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llMerchantRow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:foreground="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOrgName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginEnd="7dp"
+                    app:textAllCaps="true"
+                    android:text="@{merchant.orgName}"
+                    android:textStyle="bold"
+                    android:transitionName="merchant"
+                    android:textColor="@color/main_text_light"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:text="@{merchant.getAddress()}"
+                    android:textColor="@color/additional_text_3"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:visibility="gone"
+                    android:layout_marginEnd="7dp"
+                    android:text="@{merchant.getMerchantId()}"
+                    android:textColor="@color/additional_text"/>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:layout_marginEnd="7dp"
+                    android:text="@{merchant.getMobileNumberWithCode()}"
+                    android:textColor="@color/additional_text"/>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="15dp"
+            android:background="@color/keypad_color" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

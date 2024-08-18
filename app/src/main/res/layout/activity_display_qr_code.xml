@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".paypr_app.ui.activity.DisplayQrCodeActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_svg_back_arrow"
+        app:title=""
+        app:titleTextColor="@color/additional_text" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:paddingBottom="@dimen/activity_padding"
+        android:paddingStart="@dimen/activity_padding"
+        android:paddingEnd="@dimen/activity_padding">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginBottom="5dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvNameQr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_text_light"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="21sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMobileQr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/additional_text"
+                android:textStyle="bold"
+                android:textSize="19sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivQrCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:transitionName="qr_image"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text_light"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textSize="22sp" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llEnterAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="onClickAddAmount"
+            android:foreground="?attr/selectableItemBackground"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvEnterAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/main_text"
+                android:text="@string/enter_amount_init_caps"
+                android:textSize="16sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvOptional"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/optional"
+                android:textStyle="italic"
+                android:textColor="@color/additional_text"
+                android:textSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

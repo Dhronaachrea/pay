@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="30dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="30dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="15dp"
+    tools:context="com.skilrock.paypr.paypr_app.dialog.PayprWelcomeDialog">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHeaderSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/element_gray"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvSubjectSD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:textColor="@color/main_text"
+        android:padding="5dp"
+        android:gravity="center"
+        android:textSize="16sp" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivLogoSd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_svg_paypr_logo"
+        android:transitionName="splash_to_login" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvActionSD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:background="?attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:padding="10dp"
+        android:textColor="@color/constructive"
+        android:textSize="14sp"
+        app:textAllCaps="true" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

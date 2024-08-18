@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.ProfileViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".paypr_app.ui.fragment.ProfileFragment">
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="130dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="12dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:paddingTop="10dp"
+            android:transitionName="profile_to_personal_data"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp"
+            card_view:cardMaxElevation="4dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/activity_padding">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/ivProfileImage"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_trash_face"
+                    app:shapeAppearanceOverlay="@style/circleImageView" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/activity_padding"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvNameProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@={viewModel.playerName}"
+                            android:textColor="@color/element_gray"
+                            android:textSize="22sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvBalanceProfile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="@={viewModel.playerBalance}"
+                            android:textColor="@color/keypad_text_color"
+                            android:textSize="18sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/balance"
+                            android:textColor="@color/additional_text"
+                            android:textSize="14sp" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_svg_right_arrow" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llTransactionsProfile"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/recent_transactions"
+                android:textColor="@color/additional_text"
+                android:textSize="18sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTransactionsProfile"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="16dp"
+                android:layout_weight="1" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvNoTransactionsProfile"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/you_have_not_done_any_transactions_lately"
+            android:textColor="@color/additional_text"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

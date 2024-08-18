@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".paypr_app.ui.activity.TermsAndConditionsActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        app:navigationIcon="@drawable/ic_svg_back_arrow"
+        app:title=""
+        app:titleTextColor="@color/additional_text" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/activity_padding"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="30dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/additional_text"
+                    android:gravity="center"
+                    android:transitionName="sign_up_title"
+                    android:text="@string/terms_and_conditions_" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvTncText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/main_text"
+                    android:scrollbars = "vertical"
+                    android:text="@string/terms_and_conditions_text" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDisagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="@string/disagree"
+            android:textColor="@color/destructive"
+            android:textSize="16sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAgree"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_gradient"
+            android:text="@string/agree"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:foreground="?attr/selectableItemBackground"
+            android:theme="@style/Theme.MaterialComponents"
+            android:transitionName="transition_button"
+            app:backgroundTint="@null" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

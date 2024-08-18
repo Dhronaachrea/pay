@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.HomePayprViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llHomeContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".paypr_app.ui.activity.HomePayprActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/white"
+                app:titleTextAppearance="@style/MaterialToolbar.TitleText"
+                app:navigationIcon="@drawable/ic_svg_back_arrow"
+                app:title=""
+                app:titleTextColor="#020202"
+                android:transitionName="splash_to_login_inputs" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivThreeDotsMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:src="@drawable/ic_svg_three_dots" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/nav_host_fragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/paypr_nav_graph" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-8dp"
+            android:layout_marginTop="-4dp"
+            android:scaleY="1.5"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/destructive"
+            android:indeterminate="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/bottom_nav_shadow" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigationView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            app:elevation="8dp"
+            app:itemIconTint="@color/bottom_nav_color"
+            app:itemTextColor="@color/bottom_nav_color"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation_menu" />
+
+        <!--app:itemBackground="@drawable/bottom_nav_color"-->
+        <!--app:itemIconTint="@color/destructive"
+        app:itemTextColor="@color/destructive"-->
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="30dp"
+    android:background="@drawable/rounded_corners"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    tools:context="com.skilrock.paypr.paypr_app.dialog.PayprAppVersionDialog">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="75dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="25dp"
+        android:contentDescription="@string/image"
+        android:src="@drawable/ic_svg_paypr_logo" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/element_gray"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="25dp"
+        android:gravity="center"
+        android:textColor="@color/main_text" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLater"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:text="@string/update_later"
+            android:textColor="@color/constructive"
+            android:textSize="13sp"
+            android:theme="@style/Theme.MaterialComponents"
+            app:strokeColor="@color/constructive"
+            app:strokeWidth="2dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUpdate"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/constructive"
+            android:text="@string/update_now"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:theme="@style/Theme.MaterialComponents" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

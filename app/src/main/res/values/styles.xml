@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/white</item>
+        <item name="colorAccent">@color/main_text</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlHighlight">@color/element_gray</item>
+
+        <item name="android:windowContentTransitions">true</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+
+    <style name="AppTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/text_input_box_stroke</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_marginBottom">1dp</item>
+        <item name="android:textColorHint">@color/element_gray</item>
+        <item name="hintTextColor">@color/element_gray</item>
+        <item name="boxStrokeWidthFocused">1dp</item>
+        <item name="errorTextColor">@color/destructive</item>
+        <item name="boxStrokeErrorColor">@color/destructive</item>
+        <item name="errorIconDrawable">@null</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.TextInputEditText.Outlined" parent="">
+        <item name="colorPrimary">@color/additional_text</item>
+    </style>
+
+    <style name="DialogAnimationUpDown" parent="Theme.MaterialComponents.Light">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_up</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_down</item>
+    </style>
+
+    <style name="DialogAnimationRightToCenter">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_left</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_right</item>
+    </style>
+
+    <style name="DialogAnimationLeftToCenter">
+        <item name="android:windowEnterAnimation">@anim/dialog_slide_left_to_center</item>
+        <item name="android:windowExitAnimation">@anim/dialog_slide_center_to_left</item>
+    </style>
+
+    <style name="DialogAnimationFadeInOut">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_out</item>
+    </style>
+
+    <style name="DialogAnimationZoomInOut">
+        <item name="android:windowEnterAnimation">@anim/zoom_in</item>
+        <item name="android:windowExitAnimation">@anim/zoom_out</item>
+    </style>
+
+    <style name="StyleCustomKeypad">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:foreground">?attr/selectableItemBackground</item>
+        <item name="android:textColor">@color/keypad_text_color</item>
+    </style>
+
+    <style name="SCBSwitch" parent="Theme.AppCompat.Light">
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/accent_color</item>
+    </style>
+
+    <style name="circleImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="paypr_date_picker_theme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="colorAccent">@color/element_gray</item>                   <!--header background-->
+        <item name="android:windowBackground">@color/white</item>     <!--calendar background-->
+        <item name="android:colorControlActivated">@color/destructive</item> <!--selected day-->
+        <item name="android:colorControlHighlight">@color/element_gray</item> <!--selected day-->
+        <item name="android:textColorPrimary">@color/additional_text</item> <!--days of the month-->
+        <item name="android:textColorSecondary">@color/destructive</item>    <!--days of the week-->
+        <item name="android:colorButtonNormal">@color/destructive</item>    <!--days of the week-->
+        <item name="android:buttonBarNegativeButtonStyle">@style/DatePickerTheme.ButtonBarNegativeButtonStyle</item>
+    </style>
+
+    <style name="DatePickerTheme.ButtonBarNegativeButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/destructive</item>
+    </style>
+
+    <style name="DialogSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+    </style>
+
+    <style name="MaterialToolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+</resources>

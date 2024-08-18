@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.TransactionViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".paypr_app.ui.fragment.TransactionFragment">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/browse_your_recent_transactions"
+            android:textColor="@color/additional_text"
+            android:layout_marginTop="-5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="16dp"
+            android:textSize="17sp" />
+
+        <androidx.cardview.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="5dp"
+            card_view:cardCornerRadius="5dp"
+            card_view:cardElevation="4dp"
+            card_view:cardMaxElevation="4dp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/containerFromDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_grey"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/from"
+                            android:textColor="@color/additional_text"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvStartDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/icon_down_arrow"
+                            android:textColor="@color/main_text"
+                            android:text="@={viewModel.startDate}" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/containerEndDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_grey"
+                        android:orientation="vertical"
+                        android:paddingStart="16dp"
+                        android:paddingTop="5dp"
+                        android:paddingEnd="16dp"
+                        android:paddingBottom="8dp">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/to"
+                            android:textColor="@color/additional_text"
+                            android:textSize="12sp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tvEndDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableEnd="@drawable/icon_down_arrow"
+                            android:textColor="@color/main_text"
+                            android:text="@={viewModel.endDate}" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivProceed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:contentDescription="@string/image"
+                        android:onClick="@{() -> viewModel.callTransactionApi()}"
+                        android:src="@drawable/ic_icon_arrow_button" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvReportTransactions"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="16dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

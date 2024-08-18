@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "131817912315",
+    "project_id": "payprconsumer",
+    "storage_bucket": "payprconsumer.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:131817912315:android:5b6771426fffdea8467d5e",
+        "android_client_info": {
+          "package_name": "com.skilrock.paypr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "131817912315-pkk28gevcnlb526j2csr2red6ggaq3qv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANj-N3c0_xF9iigLeSnlXc0I8lUjJVfqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "131817912315-pkk28gevcnlb526j2csr2red6ggaq3qv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

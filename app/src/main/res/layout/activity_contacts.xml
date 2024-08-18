@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".paypr_app.ui.activity.ContactsActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="16dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:onClick="onClickBack"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground"
+            android:src="@drawable/ic_scg_cross" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="15dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSelectedName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="normal"
+                android:textColor="@color/main_text"/>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSelectedContactNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textColor="@color/additional_text"
+                android:textSize="15sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvSignInRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="5dp"
+            android:text="@string/done_caps"
+            android:onClick="onDoneClick"
+            android:textSize="16sp"
+            android:textColor="@color/constructive"
+            android:transitionName="transition_sign_in_up"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvContacts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

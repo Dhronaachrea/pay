@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.RegistrationViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".paypr_app.ui.activity.RegistrationOtpActivity">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            app:navigationIcon="@drawable/ic_svg_back_arrow"
+            app:title=""
+            app:titleTextColor="@color/additional_text" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="26dp"
+                android:layout_marginTop="26dp"
+                android:layout_marginEnd="26dp"
+                android:gravity="center"
+                android:text="@string/enter_otp_title_msg"
+                android:textColor="@color/additional_text"
+                android:textSize="16sp"
+                android:transitionName="sign_up_title" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="40dp"
+                android:src="@drawable/ic_svg_paper_plane"
+                android:transitionName="splash_to_login" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llInputs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:transitionName="splash_to_login_inputs">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp1"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp2"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp3"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp4"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp5"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvOtp6"
+                    android:layout_width="0dp"
+                    android:layout_height="53dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/otp_outline"
+                    android:gravity="center"
+                    android:text="@string/x"
+                    android:textColor="@color/element_gray"
+                    android:textSize="20sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llRestore"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:onClick="onCancelClick"
+                    android:padding="5dp"
+                    android:text="@string/cancel"
+                    android:textColor="@color/destructive"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRestore"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/button_gradient"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:text="@string/sign_up"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:theme="@style/Theme.MaterialComponents"
+                    android:transitionName="transition_button"
+                    app:backgroundTint="@null" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/llKeyPad"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/keypad_color"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey1"
+                        style="@style/StyleCustomKeypad"
+                        android:text="1"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey2"
+                        style="@style/StyleCustomKeypad"
+                        android:text="2"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey3"
+                        style="@style/StyleCustomKeypad"
+                        android:text="3"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cbd3d6" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey4"
+                        style="@style/StyleCustomKeypad"
+                        android:text="4"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey5"
+                        style="@style/StyleCustomKeypad"
+                        android:text="5"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey6"
+                        style="@style/StyleCustomKeypad"
+                        android:text="6"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cbd3d6" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey7"
+                        style="@style/StyleCustomKeypad"
+                        android:text="7"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey8"
+                        style="@style/StyleCustomKeypad"
+                        android:text="8"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey9"
+                        style="@style/StyleCustomKeypad"
+                        android:text="9"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#cbd3d6" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKeyClose"
+                        style="@style/StyleCustomKeypad"
+                        android:text="⨯"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKey0"
+                        style="@style/StyleCustomKeypad"
+                        android:text="0"
+                        tools:ignore="HardcodedText" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#cbd3d6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvKeyDone"
+                        style="@style/StyleCustomKeypad"
+                        android:text="✓"
+                        tools:ignore="HardcodedText" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="-6dp"
+                android:layout_marginTop="-4dp"
+                android:scaleY="1.6"
+                android:visibility="invisible"
+                android:indeterminateTint="@color/destructive"
+                android:indeterminate="true" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

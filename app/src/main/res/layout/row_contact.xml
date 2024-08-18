@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    android:id="@+id/llContactRow"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center"
+    android:foreground="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvContactInitial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/rounded_text_view"
+        android:textColor="@color/additional_text"
+        android:textSize="20sp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_marginStart="20dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/main_text"
+            android:textSize="18sp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvContactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:textColor="@color/additional_text"
+            android:textSize="14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.skilrock.paypr.paypr_app.viewmodel.RegistrationViewModel" />
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".paypr_app.ui.activity.RegistrationActivity">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/activity_padding"
+            android:orientation="vertical">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvSignInRegistration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="5dp"
+                android:text="@string/sign_in"
+                android:onClick="onSignUpIn"
+                android:textSize="18sp"
+                android:transitionName="transition_sign_in_up"/>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:weightSum="1">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/ivLogo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:src="@drawable/ic_svg_paypr_logo"
+                        android:transitionName="splash_to_login" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvSignUpTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="40dp"
+                        android:textSize="24sp"
+                        android:textColor="@color/main_text_light"
+                        android:gravity="center"
+                        android:transitionName="slogan"
+                        android:text="@string/let_s_get_started_with_paypr" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="20sp"
+                        android:textColor="@color/additional_text"
+                        android:gravity="center"
+                        android:text="@string/enter_your_details_below" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/llInputs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:transitionName="splash_to_login_inputs">
+
+                        <com.skilrock.paypr.utility.PayprTextInputLayout
+                            android:id="@+id/tilEmailRegistration"
+                            style="@style/AppTextInputLayoutStyle"
+                            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etEmailRegistration"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:hint="@string/email"
+                                android:imeOptions="actionNext"
+                                android:inputType="textEmailAddress"
+                                android:maxLength="40"
+                                android:maxLines="1"
+                                android:text="@={viewModel.email}"
+                                android:singleLine="true"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/main_text"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textSize="18sp" />
+
+                        </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+                        <com.skilrock.paypr.utility.PayprTextInputLayout
+                            android:id="@+id/tilMobileRegistration"
+                            style="@style/AppTextInputLayoutStyle"
+                            android:hint="@string/mobile_number"
+                            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etMobileRegistration"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:imeOptions="actionNext"
+                                android:inputType="number"
+                                android:maxLength="7"
+                                android:maxLines="1"
+                                android:drawablePadding="10dp"
+                                android:text="@={viewModel.mobileNumber}"
+                                android:singleLine="true"
+                                android:drawableStart="@drawable/ic_country_code"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/main_text"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textSize="18sp" />
+
+                        </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+                        <com.skilrock.paypr.utility.PayprTextInputLayout
+                            android:id="@+id/tilUsernameRegistration"
+                            style="@style/AppTextInputLayoutStyle"
+                            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etUserNameRegistration"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-. "
+                                android:hint="@string/full_name"
+                                android:imeOptions="actionNext"
+                                android:inputType="textCapWords"
+                                android:maxLength="30"
+                                android:maxLines="1"
+                                android:text="@={viewModel.name}"
+                                android:singleLine="true"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/main_text"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textSize="18sp" />
+
+                        </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+                        <com.skilrock.paypr.utility.PayprTextInputLayout
+                            android:id="@+id/tilPasswordRegistration"
+                            style="@style/AppTextInputLayoutStyle"
+                            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleDrawable="@drawable/custom_password_eye"
+                            app:passwordToggleTint="@color/additional_text_2">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etPasswordRegistration"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                android:hint="@string/password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textPassword"
+                                android:maxLength="16"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@={viewModel.password}"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/main_text"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textSize="18sp" />
+
+                        </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+                        <com.skilrock.paypr.utility.PayprTextInputLayout
+                            android:id="@+id/tilRePasswordRegistration"
+                            style="@style/AppTextInputLayoutStyle"
+                            android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleDrawable="@drawable/custom_password_eye"
+                            app:passwordToggleTint="@color/additional_text_2">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etRePasswordRegistration"
+                                android:layout_width="match_parent"
+                                android:layout_height="60dp"
+                                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+                                android:hint="@string/re_enter_password"
+                                android:imeOptions="actionDone"
+                                android:inputType="textPassword"
+                                android:maxLength="16"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="@={viewModel.confirmPassword}"
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/main_text"
+                                android:textCursorDrawable="@drawable/color_cursor"
+                                android:textSize="18sp" />
+
+                        </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/outline_rounded"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:orientation="vertical">
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPasswordPolicyTag"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/password_policy"
+                                android:textColor="@color/element_gray"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/tvPasswordPolicyDot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/dot"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginEnd="7dp"
+                                android:textColor="@color/element_gray"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/tvPasswordPolicyTag"/>
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/password_rules_new"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginStart="5dp"
+                                android:textColor="@color/element_gray"
+                                app:layout_constraintTop_toBottomOf="@+id/tvPasswordPolicyTag"
+                                app:layout_constraintStart_toEndOf="@+id/tvPasswordPolicyDot"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </ScrollView>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:onClick="onClickTnc"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?attr/selectableItemBackground"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/by_signing_up_you_are_agreeing_to_our"
+                    android:textSize="12sp"
+                    android:textColor="@color/additional_text" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_agreement"
+                    android:textSize="12sp"
+                    android:textColor="@color/icon_back" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btNextRegistration"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/button_gradient"
+                android:text="@string/generate_otp"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:foreground="?attr/selectableItemBackground"
+                android:onClick="@{() -> viewModel.callRegistrationValidationApi()}"
+                android:theme="@style/Theme.MaterialComponents"
+                app:backgroundTint="@null"
+                android:transitionName="transition_button" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="-6dp"
+            android:layout_marginTop="-4dp"
+            android:scaleY="1.6"
+            android:visibility="invisible"
+            android:indeterminateTint="@color/destructive"
+            android:indeterminate="true" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

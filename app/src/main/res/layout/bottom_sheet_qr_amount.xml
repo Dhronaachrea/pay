@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:paddingStart="15dp"
+    android:paddingEnd="15dp"
+    app:cardCornerRadius="0dp">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".dialogs.InboxBottomSheetDialog">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:background="@color/destructive" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/element_gray"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="20dp"
+                android:text="@string/add_amount_to_your_qr" />
+
+            <com.skilrock.paypr.utility.PayprTextInputLayout
+                android:id="@+id/tilAmountQR"
+                style="@style/AppTextInputLayoutStyle"
+                android:hint="@string/enter_amount"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:theme="@style/ThemeOverlay.AppTheme.TextInputEditText.Outlined">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAmountQR"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLength="6"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/main_text"
+                    android:textCursorDrawable="@drawable/color_cursor"
+                    android:textSize="16sp" />
+
+            </com.skilrock.paypr.utility.PayprTextInputLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnCancel"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="0dp"
+                    android:layout_height="61dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"
+                    android:text="@string/cancel"
+                    android:textAllCaps="false"
+                    android:textColor="@color/button_color"
+                    android:textSize="15sp"
+                    android:theme="@style/Theme.MaterialComponents"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cornerRadius="10dp"
+                    app:strokeColor="@color/button_color"
+                    app:strokeWidth="2dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAdd"
+                    style="@style/Widget.MaterialComponents.Button"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_gradient"
+                    android:text="@string/add"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:theme="@style/Theme.MaterialComponents"
+                    app:backgroundTint="@null" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</com.google.android.material.card.MaterialCardView>

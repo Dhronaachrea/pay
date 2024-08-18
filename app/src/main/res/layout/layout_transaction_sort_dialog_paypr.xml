@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_margin="30dp"
+    android:background="@drawable/rounded_corners"
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="30dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="15dp"
+    tools:context="com.skilrock.paypr.paypr_app.dialog.PayprTransactionSortDialog">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/element_gray"
+        android:textSize="18sp"
+        android:text="@string/sort_by"
+        android:gravity="center"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioAll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="ALL"
+            android:text="@string/all"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioWager"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="PLR_WAGER"
+            android:text="@string/wager"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioDeposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="PLR_DEPOSIT"
+            android:text="@string/deposit"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioWithdrawal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="PRL_WITHDRAWAL"
+            android:text="@string/withdrawal"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioWinning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="PLR_WINNING"
+            android:text="@string/winning"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioCashIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="TRANSFER_IN"
+            android:text="@string/cash_in"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radioCashOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_text"
+            android:tag="TRANSFER_OUT"
+            android:text="@string/cash_out"/>
+
+    </RadioGroup>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:orientation="horizontal">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvDisagree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:text="@string/disagree"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/destructive"
+            android:textSize="14sp"
+            app:textAllCaps="true" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tvAgree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp"
+            android:text="@string/agree"
+            android:textColor="@color/constructive"
+            android:textSize="14sp"
+            app:textAllCaps="true" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

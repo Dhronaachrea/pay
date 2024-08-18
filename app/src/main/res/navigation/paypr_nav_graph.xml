@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/fundTransferFragment">
+
+    <fragment
+        android:id="@+id/transactionFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.TransactionFragment"
+        android:label="fragment_transaction"
+        tools:layout="@layout/fragment_transaction" />
+
+    <fragment
+        android:id="@+id/fundTransferFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.FundTransferFragment"
+        android:label="fragment_fund_transfer"
+        tools:layout="@layout/fragment_fund_transfer" >
+
+        <action
+            android:id="@+id/action_fundTransferFragment_to_fundTransferPaymentFragment"
+            app:destination="@id/fundTransferPaymentFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/retailersFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.MerchantsFragment"
+        android:label="fragment_retailers"
+        tools:layout="@layout/fragment_merchants" />
+
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.PaymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+
+        <action
+            android:id="@+id/action_profileFragment_to_personalDataFragment"
+            app:destination="@id/personalDataFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fundTransferPaymentFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.FundTransferPaymentFragment"
+        android:label="FundTransferPaymentFragment" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="destinationAccount"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="buttonTitle"
+            app:argType="string" />
+        <argument
+            android:name="merchantId"
+            app:argType="string" />
+        <argument
+            android:name="amount"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personalDataFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.PersonalDataFragment"
+        android:label="PersonalDataFragment" >
+
+        <action
+            android:id="@+id/action_personalDataFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+
+        <action
+            android:id="@+id/action_personalDataFragment_to_profileUpdateFragment"
+            app:destination="@id/profileUpdateFragment"
+            app:popEnterAnim="@anim/fade_in"
+            app:popExitAnim="@anim/fade_out"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out" />
+        <argument
+            android:name="updatedItem"
+            app:argType="string" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.ChangePasswordFragment"
+        android:label="ChangePasswordFragment" />
+    <fragment
+        android:id="@+id/profileUpdateFragment"
+        android:name="com.skilrock.paypr.paypr_app.ui.fragment.ProfileUpdateFragment"
+        android:label="ProfileUpdateFragment" >
+        <argument
+            android:name="pageTitle"
+            app:argType="string" />
+        <argument
+            android:name="hint"
+            app:argType="string" />
+        <argument
+            android:name="inputType"
+            app:argType="integer" />
+        <argument
+            android:name="pageType"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

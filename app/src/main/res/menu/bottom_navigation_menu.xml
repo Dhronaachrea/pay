@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/fundTransferFragment"
+        android:icon="@drawable/ic_svg_transfer"
+        android:title="@string/transfers" />
+    <item
+        android:id="@id/transactionFragment"
+        android:icon="@drawable/ic_svg_transactions"
+        android:title="@string/transactions" />
+    <item
+        android:id="@id/retailersFragment"
+        android:icon="@drawable/ic_svg_location"
+        android:title="@string/retails" />
+    <item
+        android:id="@id/profileFragment"
+        android:icon="@drawable/ic_svg_profile"
+        android:title="@string/profile" />
+
+</menu>

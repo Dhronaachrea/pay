@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="element_gray">#8F9DB5</color>
+    <color name="constructive">#5D92EB</color>
+    <color name="default_input">#E2EFF4</color>
+    <color name="dialog_background">#f5f6f9</color>
+    <color name="dialog_background_error">#fff1f1</color>
+    <color name="main_text">#333A46</color>
+    <color name="main_text_light">#4c5668</color>
+    <color name="additional_text">#7E8EAA</color>
+    <color name="additional_text_2">#C1C6CE</color>
+    <color name="additional_text_3">#9a9ea4</color>
+    <color name="accent_color">#FF9D9D</color>
+    <color name="icon_back">#FF7878</color>
+    <color name="keypad_color">#ECEFF0</color>
+    <color name="keypad_text_color">#061D28</color>
+    <color name="destructive">#1d8f38</color>
+    <color name="button_color">#28bf4c</color>
+
+</resources>
